@@ -1,0 +1,9 @@
+[submodule "platform/config-sever"]
+	path = platform/config-sever
+	url = https://github.com/ashanrupasingha/Booking_config-server.git
+[submodule "platform/eureka-server"]
+	path = platform/eureka-server
+	url = https://github.com/ashanrupasingha/Booking_eureka-server.git
+[submodule "platform/api-gateway"]
+	path = platform/api-gateway
+	url = https://github.com/ashanrupasingha/booking_api-gateway.git
