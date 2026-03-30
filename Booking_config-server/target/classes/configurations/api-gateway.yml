@@ -1,0 +1,32 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: user-service
+          uri: lb://user-service
+          predicates:
+            - Path=/api/users/**
+        - id: parking-service
+          uri: lb://parking-service
+          predicates:
+            - Path=/api/parking/**
+        - id: ticket-service
+          uri: lb://ticket-service
+          predicates:
+            - Path=/api/tickets/**
+      globalcors:
+        cors-configurations:
+          cors-configurations:
+            '[/**]':
+              allowedOrigins:
+                - "http://localhost:3000"
+              allowedMethods:
+                - GET
+                - POST
+                - PUT
+                - DELETE
+                - OPTIONS
+              allowedHeaders:
+                - "*"
+              allowCredentials: true
+              maxAge: 3600
