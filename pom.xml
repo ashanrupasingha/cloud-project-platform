@@ -65,13 +65,13 @@
     <!-- 🔥 BUILD PLUGIN (IMPORTANT 🔥) -->
     <build>
         <plugins>
-
-            <!-- Spring Boot Plugin -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>src/main/java/com/spms/configserver/ConfigServerApplication.java</mainClass>
+                </configuration>
             </plugin>
-
         </plugins>
     </build>
 
